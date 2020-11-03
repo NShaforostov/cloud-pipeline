@@ -50,13 +50,13 @@ public final class DatastorageCreatorUtils {
         return new S3bucketDataStorage(ID, TEST_STRING, TEST_STRING);
     }
 
-    public static S3bucketDataStorage getS3bucketDataStorage(Long id, String owner) {
+    public static S3bucketDataStorage getS3bucketDataStorage(final Long id, final String owner) {
         final S3bucketDataStorage s3bucket = new S3bucketDataStorage(id, TEST_STRING, TEST_STRING);
         s3bucket.setOwner(owner);
         return s3bucket;
     }
 
-    public static S3bucketDataStorage getS3bucketDataStorage(Long id, String owner, boolean shared) {
+    public static S3bucketDataStorage getS3bucketDataStorage(final Long id, final String owner, final boolean shared) {
         final S3bucketDataStorage s3bucket = new S3bucketDataStorage(id, TEST_STRING, TEST_STRING);
         s3bucket.setOwner(owner);
         s3bucket.setShared(shared);
@@ -93,7 +93,7 @@ public final class DatastorageCreatorUtils {
         return new DataStorageItemContent();
     }
 
-    public static DataStorageStreamingContent getDefaultDataStorageStreamingContent(InputStream inputStream) {
+    public static DataStorageStreamingContent getDefaultDataStorageStreamingContent(final InputStream inputStream) {
         return new DataStorageStreamingContent(inputStream, TEST_STRING);
     }
 
